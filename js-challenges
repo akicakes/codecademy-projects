@@ -6,4 +6,12 @@ const canIVote = (age) => {
   };
 };
 
-console.log(canIVote(19))
+console.log(canIVote(19));
+
+
+//shorter version
+const canIVote = age => age >= 18;
+
+console.log(canIVote(19));
+
+
