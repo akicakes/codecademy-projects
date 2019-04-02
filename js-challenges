@@ -1,3 +1,5 @@
+//1
+
 const canIVote = (age) => {
   if (age >= 18) {
     return true;
@@ -15,3 +17,67 @@ const canIVote = age => age >= 18;
 console.log(canIVote(19));
 
 
+
+
+//2
+
+const agreeOrDisagree = (stringOne, stringTwo) => {
+  if (stringOne === stringTwo) {
+    return 'You agree!';
+  } else {
+    return 'You disagree!';
+  }
+};
+
+console.log(agreeOrDisagree("yep", "yep")) 
+//prints 'You agree!'
+
+
+
+
+//3
+
+const lifePhase = (age) => {
+  if (age >= 0 && age <= 3) {
+    return 'baby';
+  } else if (age >= 4 && age <= 12) {
+      return 'child';
+  } else if (age >= 13 && age <= 19) {
+        return 'teen';
+  } else if (age >= 20 && age <= 64) {
+      return 'adult';
+  } else if (age >= 65 && age <= 140) {
+      return 'senior citizen';
+  } else {
+      return 'This is not a valid age';
+  }  
+};
+
+console.log(lifePhase(5)) 
+//prints 'child'
+
+
+
+//4
+
+const finalGrade = (num1, num2, num3) => {
+  const average = ((num1 + num2 + num3)/ 3);
+  if ((num1 < 0 || num1 > 100) || (num2 < 0 || num2 > 100) || (num3 < 0 || num3 > 100)) {
+    return 'You have entered an invalid grade.';  
+  } else if (average >= 0 && average <= 59) {
+    return 'F';
+  } else if (average >= 60 && average <= 69) {
+    return 'D';
+  } else if (average >= 70 && average <= 79) {
+    return 'C';
+  } else if (average >=80 && average <= 89) {
+    return 'B';
+  } else if (average >= 90 && average <= 100) {
+    return 'A';
+  } else {
+    return 'You have entered an invalid grade.';
+  }
+};
+
+console.log(finalGrade(90, 92, 95)) 
+// Prints 'A'
