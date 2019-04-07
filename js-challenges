@@ -81,3 +81,75 @@ const finalGrade = (num1, num2, num3) => {
 
 console.log(finalGrade(90, 92, 95)) 
 // Prints 'A'
+
+
+
+//5
+
+const reportingForDuty = (rank, lastName) => {
+  return `${rank} ${lastName} reporting for duty!`;
+};
+
+console.log(reportingForDuty('Private', 'Fido')) 
+// Prints 'Private Fido reporting for duty!'
+
+
+
+//6
+
+//bad code
+
+const rollTheDice = () => {
+  // Math.random() gives us a random number from 0 up to, but not including, 1
+  // We multiplied that by 6 to get a number between 0 and up to, but not including, 6
+  // But since we actually wanted numbers from 1 to 6, inclusive, we added 1
+    let die1 = Math.random() * 6 + 1
+    let die2 = Math.random() * 6 + 1
+    return die1 + die2
+}
+
+console.log(rollTheDice());
+//undefined error
+//checking each variable prints a non-whole number
+
+
+//fixed code
+
+const rollTheDice = () => {
+    return die1 + die2;
+};
+
+let die1 = Math.floor(Math.random() * 6 + 1);
+let die2 = Math.floor(Math.random() * 6 + 1);
+    
+console.log(rollTheDice());
+//prints a number between 1 and 12 at random
+
+
+
+7//
+
+const calculateWeight = (earthWeight, planet) => {
+  switch(planet) {
+    case 'Mercury':
+      return earthWeight * 0.378;
+      break;
+    case 'Venus':
+      return earthWeight * 0.907;
+      break;
+    case 'Mars':
+      return earthWeight * 0.377;
+      break;
+    case 'Jupiter':
+      return earthWeight * 2.36;
+      break;
+    case 'Saturn':
+      return earthWeight * 0.916;
+      break;
+    default:
+      return 'Invalid Planet Entry. Try: Mercury, Venus, Mars, Jupiter, or Saturn.';
+  };
+};
+
+console.log(calculateWeight(100, 'Jupiter')); 
+// Prints 236
